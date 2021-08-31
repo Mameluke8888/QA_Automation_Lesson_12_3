@@ -18,21 +18,21 @@ class Browser:
         # decide which browser to open, can be extended
         configs = ConfigReader("config.ini")
         # comment next 2 lines, uncomment try-except section below to read configurable values of size of browser window
-        browser_width = -1
-        browser_height = -1
-        try:
-            browser_width = configs.get_browser_width(environment_section_name)
-            browser_height = configs.get_browser_height(environment_section_name)
-        except Exception:
-            browser_width = -1
-            browser_height = -1
+        # browser_width = -1
+        # browser_height = -1
+        # try:
+        #     browser_width = configs.get_browser_width(environment_section_name)
+        #     browser_height = configs.get_browser_height(environment_section_name)
+        # except Exception:
+        #     browser_width = -1
+        #     browser_height = -1
         try:
             if browser_name.lower() == "firefox":
                 self.driver = webdriver.Firefox(executable_path='../../drivers/geckodriver')
                 self.driver.maximize_window()
             elif browser_name.lower() == 'chrome':
                 options = webdriver.ChromeOptions()
-                # setting size of browser window if values are provided
+                # setting size of browser window if values are provided, -1 means that the values are not provided
                 if (browser_width != -1) and (browser_height != -1):
                     options.add_argument("--window-size={},{}".format(browser_width, browser_height))
                 # testing desired capabilities, maximization doesn't work on my Mac
