@@ -26,6 +26,8 @@ class Browser:
         # except Exception:
         #     browser_width = -1
         #     browser_height = -1
+        browser_width = configs.get_browser_width(environment_section_name)
+        browser_height = configs.get_browser_height(environment_section_name)
         try:
             if browser_name.lower() == "firefox":
                 self.driver = webdriver.Firefox(executable_path='../../drivers/geckodriver')
