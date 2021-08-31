@@ -1,0 +1,24 @@
+{
+  "browser": "firefox",
+  "wait_time": 10,
+  "width": 1800,
+  "height": 2400,
+  "user1": {
+    "email": "svetlana.match3@gmail.com",
+    "password": "qwerty123"
+  },
+  "user2": {
+    "email": "mameluke8888@gmail.com",
+    "password": "zxcvb123"
+  },
+  "remote": {
+    "username": "mameluke_wLf8hY",
+    "access_key": "qzjc5gmzzRX3vUKEASnm",
+    "os_version": "Catalina",
+    "os_name": "OS X",
+    "browser_name": "firefox",
+    "browser_version": "86.0",
+    "build": "browserstack-build-2",
+    "accept_ssl_certs": "true"
+  }
+}

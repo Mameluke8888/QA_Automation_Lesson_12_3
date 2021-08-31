@@ -1,0 +1,119 @@
+[
+{
+  "elements": [
+    {
+      "keyword": "Scenario",
+      "location": "register.feature:4",
+      "name": "Registering a new user",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "register.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "steps/register_steps.py:17"
+          },
+          "name": "an unregistered user is on home page",
+          "result": {
+            "duration": 0.315629243850708,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "register.feature:6",
+          "match": {
+            "arguments": [],
+            "location": "steps/register_steps.py:25"
+          },
+          "name": "user clicks on Register option of dropdown menu from My Account option in the header",
+          "result": {
+            "duration": 0.5284340381622314,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "register.feature:7",
+          "match": {
+            "arguments": [],
+            "location": "steps/register_steps.py:31"
+          },
+          "name": "user fills all fields with personal information",
+          "result": {
+            "duration": 0.6012308597564697,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "register.feature:8",
+          "match": {
+            "arguments": [],
+            "location": "steps/register_steps.py:53"
+          },
+          "name": "user checks Yes/No radiobutton for subscription to the newsletter",
+          "result": {
+            "duration": 0.2478489875793457,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "register.feature:9",
+          "match": {
+            "arguments": [],
+            "location": "steps/register_steps.py:62"
+          },
+          "name": "user checks I have read and agree to the Privacy Policy checkbox",
+          "result": {
+            "duration": 0.2370891571044922,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "And",
+          "location": "register.feature:10",
+          "match": {
+            "arguments": [],
+            "location": "steps/register_steps.py:68"
+          },
+          "name": "user clicks Continue button",
+          "result": {
+            "duration": 2.050018072128296,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "register.feature:11",
+          "match": {
+            "arguments": [],
+            "location": "steps/register_steps.py:75"
+          },
+          "name": "message \"Your Account Has Been Created!\" or \"E-Mail Address is already registered\" appears",
+          "result": {
+            "duration": 0.2910470962524414,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "register.feature:1",
+  "name": "Unregistered users can create a new account",
+  "status": "passed",
+  "tags": []
+}
+]

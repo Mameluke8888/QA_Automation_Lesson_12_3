@@ -1,0 +1,21 @@
+<testsuite name="register.Unregistered users can create a new account" tests="1" errors="0" failures="0" skipped="0" time="4.168972" timestamp="2021-08-13T03:41:22.205139" hostname="Evgenys-Mac-mini.local"><testcase classname="register.Unregistered users can create a new account" name="Registering a new user" status="passed" time="4.168972"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Registering a new user
+    Given an unregistered user is on home page ... passed in 0.316s
+    When user clicks on Register option of dropdown menu from My Account option in the header ... passed in 0.462s
+    And user fills all fields with personal information ... passed in 0.624s
+    And user checks Yes/No radiobutton for subscription to the newsletter ... passed in 0.247s
+    And user checks I have read and agree to the Privacy Policy checkbox ... passed in 0.240s
+    And user clicks Continue button ... passed in 2.049s
+    Then message "Your Account Has Been Created!" or "E-Mail Address is already registered" appears ... passed in 0.231s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+confirmation:Register Account
+message:Warning: E-Mail Address is already registered!
+
+]]>
+</system-out></testcase></testsuite>
