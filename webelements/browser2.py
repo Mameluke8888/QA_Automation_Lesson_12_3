@@ -17,20 +17,25 @@ class Browser:
     def __init__(self, url, browser_name="", time_wait=10, scenario=""):
         # decide which browser to open, can be extended
         configs = ConfigReader("config.ini")
-        try:
-            browser_width = configs.get_browser_width(environment_section_name)
-            browser_height = configs.get_browser_height(environment_section_name)
-        except Exception:
-            browser_width = -1
-            browser_height = -1
+        # updated 08/31/2021 - uncomment the section below to read configurable values of size of browser window
+        browser_width = -1
+        browser_height = -1
+        # try:
+        #     browser_width = configs.get_browser_width(environment_section_name)
+        #     browser_height = configs.get_browser_height(environment_section_name)
+        # except Exception:
+        #     browser_width = -1
+        #     browser_height = -1
         try:
             if browser_name.lower() == "firefox":
                 self.driver = webdriver.Firefox(executable_path='../../drivers/geckodriver')
                 self.driver.maximize_window()
             elif browser_name.lower() == 'chrome':
                 options = webdriver.ChromeOptions()
+                # updated 08/31/2021 - setting size of browser window if values are provided
                 if (browser_width != -1) and (browser_height != -1):
                     options.add_argument("--window-size={},{}".format(browser_width, browser_height))
+                # updated 08/31/2021 - testing desired capabilities, maximization doesn't work on my Mac
                 # options.add_argument("--start-maximized")
                 # options.add_argument("--window-size=360,800")
                 options.add_argument("--incognito")
